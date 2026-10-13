@@ -6,7 +6,7 @@ pipeline {
         stage('GitHub Checkout') {
             steps {
                 git branch: 'main',
-                    url: 'https://github.com/YOUR-GITHUB-USERNAME/ansible-jenkins-deploy.git'
+                    url: 'https://github.com/Bringways/ansible-jenkins-deploy.git'
             }
         }
 
@@ -37,10 +37,10 @@ pipeline {
 
     post {
         success {
-            echo 'SUCCESS: Deployment completed on the target servers.'
+            echo 'SUCCESS: Deployment completed!'
         }
         failure {
-            echo 'FAILED: Check Console Output for the error.'
+            echo 'FAILED: Check Console Output.'
         }
     }
 }
